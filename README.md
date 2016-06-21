@@ -136,7 +136,7 @@ Four more pixels shows additional minutes. In the original WordClock, they are i
 #### BOM
 Article | Source | Price
 ---|---|---:|
-WS2812B LED Stripes (150 LEDs/m, RGB) | [BangGood.com](http://www.banggood.com/5M-45W-150SMD-WS2812B-LED-RGB-Colorful-Strip-Light-Waterproof-IP65-WhiteBlack-PCB-DC5V-p-1035640.html) | 20,40 €
+WS2812B LED Stripes (30 LEDs/m, RGB) | [BangGood.com](http://www.banggood.com/5M-45W-150SMD-WS2812B-LED-RGB-Colorful-Strip-Light-Waterproof-IP65-WhiteBlack-PCB-DC5V-p-1035640.html) | 20,40 €
 Mini NodeMCU | [BangGood.com](http://www.banggood.com/Mini-NodeMCU-ESP8266-WIFI-Development-Board-Based-On-ESP-12F-p-1054209.html) | 4,85 €
 3A Micro-USB Supply | [BangGood.com](http://www.banggood.com/USUKEU-DC-5V-4A-AC-Adapter-Charger-Power-Supply-For-LED-Strip-Light-p-953473.html) | 4,49 €
 Some wires|bargain bin|
