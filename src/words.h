@@ -74,3 +74,17 @@ const int word_ZEHN2[]   {X1Y10, X2Y10, X3Y10, X4Y10};
 const int word_ELF[]     {X6Y5, X7Y5, X8Y5};
 const int word_ZWOELF[]  {X7Y9, X8Y9, X9Y9, X10Y9, X11Y9};
 const int word_ZWANZIG[] {X5Y2, X6Y2, X7Y2, X8Y2, X9Y2, X10Y2, X11Y2};
+
+// Special words
+// WIFIMANAGER => "?" Icon
+const int word_WIFIMANAGER[] { 
+    X4Y1, X5Y1, X6Y1, X7Y1,
+    X3Y2, X4Y2, X7Y2, X8Y2,
+    X3Y3, X4Y3, X7Y3, X8Y3,
+    X7Y4, X8Y4,
+    X6Y5, X7Y5,
+    X5Y6, X6Y6,
+    X5Y7, X6Y7,
+    X5Y9, X6Y9,
+    X5Y10, X6Y10,
+    MIN1, MIN2, MIN3, MIN4};

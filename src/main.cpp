@@ -3,6 +3,7 @@
 #include <FastLED.h>
 #include <ESP8266WiFi.h>
 #include <TimeLib.h>
+#include <WiFiManager.h>
 // #include <EEPROM.h>
 #include "eeprom.h"
 #include "timeFunctions.h"
@@ -23,24 +24,53 @@ struct config_t
 } conf;
 */
 
+//---------------------------------------------------------------------------------------
+// configModeCallback
+//
+//  callback that gets called when connecting to previous WiFi fails
+//  and WIFIManager enters Access Point mode
+//
+// ->
+// <- --
+//---------------------------------------------------------------------------------------
+void configModeCallback(WiFiManager *myWiFiManager)
+{
+  // show "wifimanager word (words.h)"
+  word2stripe(word_WIFIMANAGER,sizeof(word_WIFIMANAGER)/sizeof(int), CRGB::Red);
+  FastLED.show();
+	Serial.println("Entered WIFIManager config mode");
+	Serial.println(WiFi.softAPIP());
+	Serial.println(myWiFiManager->getConfigPortalSSID());
+}
+
+
+
 void setup() {
+	// serial port
+	Serial.begin(115200);
+	Serial.println();
+	Serial.println();
+	Serial.println("ESP8266 WordClock setup() begin");
+
   ledSetup();
+
   blankscreen(true);
 //  EEPROM_read(0, conf);
 //  current_mode = conf.default_mode;
-
-  // show "KEIN FUNK"
-  word2stripe(word_KEIN,sizeof(word_KEIN)/sizeof(int), CRGB::Red);
-  word2stripe(word_FUNK,sizeof(word_FUNK)/sizeof(int), CRGB::Red);
-  FastLED.show();
   
-  // connect to wifi
-  WiFi.hostname("WordClock");
-  WiFi.begin(WLAN_SSID,WLAN_KEY);
-  // wait until connected
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-  }
+	// WiFi Setup 
+	Serial.println("Initializing WiFi");
+  wifi_station_set_hostname("WordClock");
+	WiFiManager wifiManager;
+	wifiManager.setAPCallback(configModeCallback);
+	if (!wifiManager.autoConnect("WordClock"))
+	{
+		Serial.println("failed to connect, timeout");
+		delay(1000);
+		ESP.reset();
+	}
+  Serial.println("Connected successfully to WiFi");
+
 
   doNTPsync();
 

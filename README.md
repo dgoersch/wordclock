@@ -4,6 +4,10 @@ This is my first DIY Wordclock
 Instead of single pixels I used a digital LED-stripe (10 pieces of 11 LEDs and 1 piece of 4 LEDs) with WS2812B-LEDs
 controlled by a NodeMCU (mini) with an ESP8266 Wifi module for configuration and NTP.
 
+## Features
+* NTP 
+* WIFIManager
+
 
 #### Stripe layout
 
