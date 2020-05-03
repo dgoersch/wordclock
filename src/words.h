@@ -39,7 +39,7 @@ Programm erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
  * y10 Z E H N E U N K U H R
  */
  
-#include "wordclock_layout1.h"
+#include "layout1.h"
 
 const int min_ONE[]      {MIN1};
 const int min_TWO[]      {MIN2};
