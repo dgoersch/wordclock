@@ -1,3 +1,5 @@
+![PlatformIO CI](https://github.com/dakky/wordclock/workflows/PlatformIO%20CI/badge.svg?branch=master)
+
 # Wordclock
 This is my first DIY Wordclock
 
