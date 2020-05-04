@@ -41,6 +41,9 @@ Programm erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
  
 #include "layout1.h"
 
+#ifndef _WORDS_H_
+#define _WORDS_H_
+
 const int min_ONE[]      {MIN1};
 const int min_TWO[]      {MIN2};
 const int min_THREE[]    {MIN3};
@@ -88,3 +91,5 @@ const int word_WIFIMANAGER[] {
     X5Y9, X6Y9,
     X5Y10, X6Y10,
     MIN1, MIN2, MIN3, MIN4};
+
+#endif

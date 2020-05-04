@@ -11,6 +11,6 @@ void word2stripe(const int word[],int len, CRGB color);
 void blankscreen(CRGB color = CRGB::Black, bool commit = false);
 void blankscreen(CRGB color, bool commit);
 
-void ledSetup();
+void setupLeds();
 
 #endif

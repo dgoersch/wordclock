@@ -17,6 +17,6 @@ void blankscreen(CRGB color, bool commit) {
   }
 }
 
-void ledSetup() {
+void setupLeds() {
     FastLED.addLeds<WS2812B, DATA_PIN, GRB>(leds, NUM_LEDS);
 }
